@@ -11,9 +11,9 @@ The source code of proposed segmentation network is in this folder. Users can us
 
 ![alt text](imgs/network.jpg "The architecture of the proposed segmentation network")
 
-### Training the network
+- Training the network
 
-- `dataset`: path of the training dataset, the dataset should be structured like
+`dataset`: path of the training dataset, the dataset should be structured like
 ```
 data
    |-- datasets
