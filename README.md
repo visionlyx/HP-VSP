@@ -11,6 +11,27 @@ The source code of proposed segmentation network is in this folder. Users can us
 
 ![alt text](imgs/network.jpg "The architecture of the proposed segmentation network")
 
+### Training the network
+
+- `dataset`: path of the training dataset, the dataset should be structured like
+```
+data
+   |-- datasets
+   |-- images
+       |-- img001.png
+       |-- img002.png
+       |-- ...
+   |-- label
+       |-- img001.png
+       |-- img002.png
+       |-- ...
+   |--predataset.py
+```
+then, run `predataset.py` to generate the training, validation, and test set  in `dataset/datasets`.
+
+run `data2list.py` to the data path of the training, validation, and test set.
+
+`train_new.py` is used to train the network.
 
 
 ## vascular segmentation pipeline
