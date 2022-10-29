@@ -9,7 +9,11 @@ HP-VSP is a high-performance deep-learning-based pipeline for whole-brain vascul
 ## segmentation network
 The source code of proposed segmentation network is in this folder. Users can use this network to train and segment their own vascular datasets.
 
+![alt text](imgs/network.jpg "The architecture of the proposed segmentation network")
+
+
 
 ## vascular segmentation pipeline
 The source code of proposed HP-VSP is in this folder. The pipeline consists of three parts: overlapping blocking, block segmentation, and blocks fusion.  Users can use this pipeline to segment large-scacle or whole-brain 3D vascular datasets.
 
+![alt text](imgs/pipeline.jpg "The architecture of the proposed HP-VSP")
