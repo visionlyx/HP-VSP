@@ -38,3 +38,18 @@ run `data2list.py` to the data path of the training, validation, and test set.
 The source code of proposed HP-VSP is in this folder. The pipeline consists of three parts: overlapping blocking, block segmentation, and blocks fusion.  Users can use this pipeline to segment large-scacle or whole-brain 3D vascular datasets.
 
 ![alt text](imgs/pipeline.jpg "The architecture of the proposed HP-VSP")
+
+- resample the dataset
+run `mpi_resample.py`
+
+
+
+`mpi_overlap_blocking.py`
+
+
+`parallel_segmentation.py`
+
+
+`mpi_block_fusion.py`
+
+
