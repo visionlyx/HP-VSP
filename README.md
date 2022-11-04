@@ -18,12 +18,12 @@ The source code of proposed segmentation network is in this folder. Users can us
 data
    |-- datasets
    |-- images
-       |-- img001.png
-       |-- img002.png
+       |-- img001.tif
+       |-- img002.tif
        |-- ...
    |-- label
-       |-- img001.png
-       |-- img002.png
+       |-- img001.tif
+       |-- img002.tif
        |-- ...
    |--predataset.py
 ```
