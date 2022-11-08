@@ -39,7 +39,7 @@ The source code of proposed HP-VSP is in this folder. The pipeline consists of t
 
 ![alt text](imgs/pipeline.jpg "The architecture of the proposed HP-VSP")
 
-- resample the dataset run `mpi_resample.py`.
+- Resample the dataset run `mpi_resample.py`.
 Two parameters need to be set before running
 ```
     #original 2D slices path
@@ -64,10 +64,8 @@ Four parameters need to be set before running
 ```
 then, run `mpiexec -n num_proc -f nodefile python mpi_overlap_blocking.py`. 
 
-- segment the overlaping cubes, run `parallel_segmentation.py`.
-
-Five 
-
+- Segment the overlaping cubes, run `parallel_segmentation.py`.
+Five parameters need to be set before running
 ```
     #avg pixel value of dataset
     all_mean1 = np.array([40], dtype=np.float32)
@@ -80,10 +78,17 @@ Five
     ......
     #load pertrained network parameters
     temp = torch.load("model_pretrained.pth")
-
 ```
+then, run `python parallel_segmentation.py`
 
-
-`mpi_block_fusion.py`
+- Merge the segmented blocks to generate the segmented 2D sequence data, run `mpi_block_fusion.py`.
+Two parameters need to be set
+```
+    # segmented 3D blocks path
+    src = '/lustre/ExternalData/liyuxin/dataset/hip/193882/right_seg/'
+    # 2D slices save path
+    dst = '/lustre/ExternalData/liyuxin/dataset/hip/193882/right_merge/'
+```
+then, run `mpiexec -n num_proc -f nodefile python mpi_block_fusion.py`. 
 
 
