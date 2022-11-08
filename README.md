@@ -39,9 +39,17 @@ The source code of proposed HP-VSP is in this folder. The pipeline consists of t
 
 ![alt text](imgs/pipeline.jpg "The architecture of the proposed HP-VSP")
 
-- resample the dataset
-run `mpi_resample.py`
+- resample the dataset run `mpi_resample.py`
 
+Two parameters need to be set before running
+
+```
+    #original 2D slices path
+    src = '/lustre/ExternalData/liyuxin/dataset/hip/193882/left_merge/'
+    #resampled 2D slices path
+    dst = '/lustre/ExternalData/liyuxin/dataset/hip/193882/left_merge2x2x2/'
+```
+then, run `mpiexec -n num_proc -f nodefile python mpi_resample.py`. `num_proc` is the total number of parallels, `nodefile` is a list of the names of the specified compute nodes.
 
 
 `mpi_overlap_blocking.py`
