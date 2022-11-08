@@ -39,10 +39,8 @@ The source code of proposed HP-VSP is in this folder. The pipeline consists of t
 
 ![alt text](imgs/pipeline.jpg "The architecture of the proposed HP-VSP")
 
-- resample the dataset run `mpi_resample.py`
-
+- resample the dataset run `mpi_resample.py`.
 Two parameters need to be set before running
-
 ```
     #original 2D slices path
     src = '/lustre/ExternalData/liyuxin/dataset/hip/193882/left_merge/'
@@ -51,9 +49,20 @@ Two parameters need to be set before running
 ```
 then, run `mpiexec -n num_proc -f nodefile python mpi_resample.py`. `num_proc` is the total number of parallels, `nodefile` is a list of the names of the specified compute nodes.
 
+- To chunk the two-dimensional sequence dataset, run `mpi_overlap_blocking.py`.
+Four parameters need to be set before running
 
-`mpi_overlap_blocking.py`
-
+```
+    #2D slices path
+    src = '/lustre/ExternalData/liyuxin/dataset/193882/2x2x2/'
+    #overlapped 3D blocks save path
+    dst = '/lustre/ExternalData/liyuxin/dataset/193882/block_2x2x2/'
+    #size of blocks
+    block_size = 192
+    #size of  overlap area
+    overlap = 32
+```
+then, run `mpiexec -n num_proc -f nodefile python mpi_overlap_blocking.py`. 
 
 `parallel_segmentation.py`
 
