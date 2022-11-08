@@ -64,7 +64,24 @@ Four parameters need to be set before running
 ```
 then, run `mpiexec -n num_proc -f nodefile python mpi_overlap_blocking.py`. 
 
-`parallel_segmentation.py`
+- segment the overlaping cubes, run `parallel_segmentation.py`.
+
+Five 
+
+```
+    #avg pixel value of dataset
+    all_mean1 = np.array([40], dtype=np.float32)
+    # set the uesed GPUs
+    os.environ["CUDA_VISIBLE_DEVICES"] = '0,1,2,3,4,5,6,7'
+    #overlapped 3D blocks path
+    tiff_path = '/lustre/ExternalData/liyuxin/dataset/hip/193882/right_block/'
+    #segmented blocks save path
+    dst = '/lustre/ExternalData/liyuxin/dataset/hip/193882/right_seg/'
+    ......
+    #load pertrained network parameters
+    temp = torch.load("model_pretrained.pth")
+
+```
 
 
 `mpi_block_fusion.py`
