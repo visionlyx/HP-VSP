@@ -24,7 +24,7 @@ if __name__ == "__main__":
     #图像灰度均值
     all_mean1 = np.array([97], dtype=np.float32)
     #tensorboard路径
-    logger = Logger("tensorboard/")
+    logger = Logger2("tensorboard/")
     #learn_rate
     lr = 0.0001
 
