@@ -94,4 +94,4 @@ then, run `mpiexec -n num_proc -f nodefile python mpi_block_fusion.py`.
 
 # Citation
 
-coming soon...
+Li Yuxin, Liu Xuhua, Jia Xueyan, Jiang Tao, Wu Jianghao, Zhang Qianlong, Li Junhuai, Li Xiangning, Li Anan. A high-performance deep-learning-based pipeline for whole-brain vasculature segmentation at the capillary resolution. Bioinformatics, 2023, 39(4): btad145.
